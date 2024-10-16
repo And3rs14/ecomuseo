@@ -1,0 +1,13 @@
+# Ignorar el directorio node_modules
+# node_modules
+
+# Ignorar el archivo package-lock.json
+# package-lock.json
+
+# Otros archivos que puedes considerar ignorar
+npm-debug.log
+.DS_Store
+vendor
+.git
+tmp
+# storage
