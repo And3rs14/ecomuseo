@@ -38,6 +38,12 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copia el contenido del directorio de la aplicación al directorio de trabajo
 COPY . /var/www
 
+# Copia el archivo .env.example a .env
+# RUN cp /var/www/.env.example /var/www/.env
+
+# Ejecuta composer install para instalar las dependencias de Laravel
+# RUN composer install --no-dev --no-interaction --optimize-autoloader
+
 # Asegura que existan los directorios necesarios para Laravel
 RUN mkdir -p /var/www/storage/framework/sessions \
     && mkdir -p /var/www/bootstrap/cache
